@@ -1,18 +1,19 @@
-import { useState } from 'react'
-import Navbar from './components/Navbar'
-import HeroSection from './components/Hero'
+import HeroSection from './components/Hero';
+import Navbar from './components/Navbar';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <>
-      <div>
-        <Navbar/>
-        <HeroSection/>
-      </div>
-    </>
-  )
+
+     <div className="min-h-screen flex flex-col">
+     <Navbar />
+     <main className="flex-1 flex flex-col">
+       <HeroSection />
+
+     </main>
+   </div>
+  );
 }
 
-export default App
+export default App;
