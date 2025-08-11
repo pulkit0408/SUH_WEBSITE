@@ -26,18 +26,13 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled
-        ? 'backdrop-blur-md bg-gradient-to-br from-slate-900/90 via-purple-900/90 to-slate-900/90 border-b border-white/10'
-        : 'bg-gradient-to-br from-slate-900/50 via-purple-900/50 to-slate-900/50 '
+      isScrolled ? 'backdrop-blur-md bg-black/30 border-b border-white/10' : 'bg-transparent'
     }`}>
-      {/* Radial gradient overlay similar to hero */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.2),transparent_70%)]"></div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-2xl font-bold text-white">
-            <img src='logo.png' alt='' />
+           <img src='logo.png' alt='' />
           </div>
 
           {/* Desktop Navigation */}
