@@ -2,6 +2,7 @@ import About from "./pages/About";
 import Brands from "./pages/Brands";
 import HeroSection from "./pages/Hero";
 import Navbar from "./pages/Navbar";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <HeroSection />
         <Brands />
         <About />
+        <Services />
       </main>
     </div>
   );
