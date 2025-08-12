@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeItem, setActiveItem] = useState('Home');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,6 +22,11 @@ const Navbar = () => {
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Contact', href: '#contact' },
   ];
+
+  const handleNavClick = (itemName) => {
+    setActiveItem(itemName);
+    setIsMenuOpen(false);
+  };
 
   return (
     <>
@@ -50,10 +56,19 @@ const Navbar = () => {
                 <a
                   key={item.name}
                   href={item.href}
-                  className="text-white hover:text-pink-400 transition-colors duration-300 font-medium relative group"
+                  onClick={() => handleNavClick(item.name)}
+                  className={`transition-colors duration-300 font-medium relative group ${
+                    activeItem === item.name
+                      ? 'text-pink-400'
+                      : 'text-white hover:text-pink-400'
+                  }`}
                 >
                   {item.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-pink-500 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-pink-500 to-blue-500 transition-all duration-300 ${
+                      activeItem === item.name ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  ></span>
                 </a>
               ))}
             </div>
@@ -76,7 +91,7 @@ const Navbar = () => {
         } md:hidden`}
         style={{
           background:
-            'linear-gradient(to bottom right, rgb(15 23 42), rgb(88 28 135), rgb(15 23 42))',
+            'linear-gradient(90deg, rgba(32, 49, 120, 0.90) 0%, rgba(74, 29, 115, 0.90) 50%, rgba(104, 24, 88, 0.90) 100%)',
         }}
       >
         {/* Close Button in Overlay */}
@@ -92,11 +107,15 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className={`text-white hover:text-pink-400 transition-all duration-500 font-medium text-2xl transform ${
+              onClick={() => handleNavClick(item.name)}
+              className={`transition-all duration-500 font-medium text-2xl transform ${
                 isMenuOpen
                   ? 'translate-x-0 opacity-100'
                   : '-translate-x-10 opacity-0'
+              } ${
+                activeItem === item.name
+                  ? 'text-pink-400'
+                  : 'text-white hover:text-pink-400'
               }`}
               style={{
                 transitionDelay: isMenuOpen ? `${index * 100}ms` : '0ms',
