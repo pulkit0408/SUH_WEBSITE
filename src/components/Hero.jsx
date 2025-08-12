@@ -11,14 +11,14 @@ const HeroSection = () => {
     <section id="home" className="relative">
       <div className="overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 mt-20">
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div> */}
 
         <img src="Vector 642.svg" alt="background" className="absolute top-5 left-0" />
 
         <img src="Frame.png" alt="rectangle" className="absolute bottom-30 left-0" />
 
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/40 z-10"></div>
+        {/* <div className="absolute inset-0 bg-black/40 z-10"></div> */}
 
         <div
           className={`relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-6 transition-all duration-1000 ${
