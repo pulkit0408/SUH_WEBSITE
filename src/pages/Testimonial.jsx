@@ -3,10 +3,10 @@ import Card from "../components/TestimonialsCard";
 const Testimonials = () => {
   return (
     <div className="py-10 my-10 flex flex-col items-center gap-4">
-      {/* Text */}
-      <div className="flex flex-col max-w-[591px] py-4">
+      {/* Header Text */}
+      <div className="flex flex-col max-w-[591px] py-4 px-4">
         <p
-          className="text-center text-2xl"
+          className="text-center text-xl sm:text-2xl"
           style={{
             background:
               "linear-gradient(90deg, #526EDE 0%, #8E51C5 50%, #CB34AD 100%)",
@@ -17,17 +17,17 @@ const Testimonials = () => {
         >
           OUR TESTIMONIALS
         </p>
-        <h1 className="text-white/95 text-center leading-[65px] text-5xl font-bold">
+        <h1 className="text-white/95 text-center leading-tight sm:leading-[65px] text-3xl sm:text-5xl font-bold mt-2">
           What Our Client Say About Us
         </h1>
-        <p className="text-white/80 text-center leading-[31px] text-xl">
+        <p className="text-white/80 text-center leading-relaxed sm:leading-[31px] text-base sm:text-xl mt-3">
           Explore stories, lessons and strategies from my journey in product
           design.
         </p>
       </div>
 
-      {/* Card Component */}
-      <div className="flex gap-8 items-center mx-10 mt-10">
+      {/* Card Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 px-4 sm:px-10 mt-10">
         <Card
           testimonial="“I've been using this web hosting service for over a year and I'm really impressed with the uptime and support. The website has never gone down and the customer service is always quick to help with any issues I have. Highly recommend!”"
           image="avatar1.png"

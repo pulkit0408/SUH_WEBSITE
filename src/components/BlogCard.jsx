@@ -1,20 +1,22 @@
 const BlogCard = ({ image, tags = [], title, description, link }) => {
   return (
-    <div className="bg-[rgba(0,0,0,0.24)] p-4 rounded-2xl max-w-[410px] text-white">
+    <div className="bg-gradient-to-br from-indigo-900 to-purple-800 p-4 sm:p-6 rounded-2xl max-w-sm sm:max-w-md text-white mx-auto">
       {/* Image */}
       <div className="overflow-hidden rounded-xl">
-        <img src={image} alt={title} className="w-full h-auto object-cover" />
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-48 sm:h-60 object-cover"
+        />
       </div>
 
       {/* Tags */}
-      <div className="flex gap-2.5 mt-4 flex-wrap">
+      <div className="flex gap-2 mt-4 flex-wrap">
         {tags.map((tag, index) => (
           <span
             key={index}
-            className={`px-1.5 py-2.5 text-sm rounded-full ${
-              index === 0
-                ? "bg-[#BE3AB2CC] text-white"
-                : "bg-[#4751E8CC] text-white"
+            className={`px-3 py-1 text-xs sm:text-sm rounded-full ${
+              index === 0 ? "bg-pink-500 text-white" : "bg-blue-600 text-white"
             }`}
           >
             {tag}
@@ -23,24 +25,15 @@ const BlogCard = ({ image, tags = [], title, description, link }) => {
       </div>
 
       {/* Title */}
-      <h3 className="text-xl font-bold mt-3">{title}</h3>
+      <h3 className="text-base sm:text-lg font-bold mt-3">{title}</h3>
 
       {/* Description */}
-      <p className="text-gray-300 font-normal text-sm leading-[21px] mt-1">
-        {description}
-      </p>
+      <p className="text-gray-300 text-xs sm:text-sm mt-1">{description}</p>
 
       {/* Link */}
       <a
         href={link}
-        className="font-medium text-sm cursor-pointer mt-3 inline-block hover:underline"
-        style={{
-          background:
-            "linear-gradient(90deg, #526EDE 0%, #8E51C5 50%, #CB34AD 100%)",
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
+        className="text-pink-400 font-medium mt-3 inline-block hover:underline text-sm sm:text-base"
       >
         Read Now →
       </a>
