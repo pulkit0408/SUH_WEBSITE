@@ -4,7 +4,7 @@ const Brands = () => {
     "Brand2.svg",
     "Brand3.svg",
     "Brand4.svg",
-    "Brand5.svg"
+    "Brand5.svg",
   ];
 
   return (
@@ -12,7 +12,7 @@ const Brands = () => {
       <div
         className="flex whitespace-nowrap"
         style={{
-          animation: "scroll 20s linear infinite"
+          animation: "scroll 20s linear infinite",
         }}
       >
         {/* First set */}

@@ -3,6 +3,7 @@ import Brands from "./pages/Brands";
 import HeroSection from "./pages/Hero";
 import Navbar from "./pages/Navbar";
 import Services from "./pages/Services";
+import Testimonials from "./pages/Testimonial";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Brands />
         <About />
         <Services />
+        <Testimonials />
       </main>
     </div>
   );
