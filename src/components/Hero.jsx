@@ -13,7 +13,7 @@ const HeroSection = () => {
 
         <img src="Vector 642.svg" alt="background" className="absolute top-5 left-0 w-auto h-auto max-w-[50%] sm:max-w-none" />
 
-        <img src="Frame.png" alt="rectangle" className="absolute bottom-30 left-0 w-auto h-auto max-w-[50%] sm:max-w-none" />
+        <img src="Frame.png" alt="rectangle" className="hidden sm:block absolute bottom-30 left-0 w-auto h-auto max-w-[50%] sm:max-w-none" />
 
         <div
           className={`relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 transition-all duration-1000 ${
