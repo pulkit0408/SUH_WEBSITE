@@ -1,4 +1,5 @@
 import About from "./pages/About";
+import Blog from "./pages/Blog";
 import Brands from "./pages/Brands";
 import HeroSection from "./pages/Hero";
 import Navbar from "./pages/Navbar";
@@ -14,7 +15,9 @@ function App() {
         <Brands />
         <About />
         <Services />
+        <Blog />
         <Testimonials />
+        {/* <Contact /> */}
       </main>
     </div>
   );
