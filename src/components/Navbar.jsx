@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-2xl font-bold text-white">
-           <img src='logo.png' alt='' />
+           <img src='logo_Suh.jpg' className='rounded-full' height={60} width={60} alt='' />
           </div>
 
           {/* Desktop Navigation */}
