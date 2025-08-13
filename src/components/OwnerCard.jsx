@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 
 const OwnerCard = ({ data }) => {
   const [index, setIndex] = useState(0);
@@ -13,36 +12,29 @@ const OwnerCard = ({ data }) => {
   };
 
   return (
-    <div className="relative max-w-3xl mx-auto bg-white/[0.03] border border-white/20 rounded-2xl shadow-lg p-10 text-center">
-      {/* Founder Image */}
+    <div className="bg-gradient-to-br from-indigo-900 to-purple-800 p-6 rounded-2xl max-w-sm mx-auto text-white">
+    {/* Profile Image */}
+    <div className="flex justify-center mb-4">
       <img
-        src={data[index].image}
-        alt={data[index].name}
-        className="w-24 h-24 mx-auto rounded-full object-cover "
+        src={data.image}
+        alt={data.name}
+        className="w-20 h-20 rounded-full object-cover"
       />
-
-      {/* Text */}
-      <p className="mt-4 text-center text-white">“{data[index].description}”</p>
-      <h3 className="mt-4 text-xl font-semibold text-white">
-        {data[index].name}
-      </h3>
-      <p className="text-white/60">{data[index].role}</p>
-
-      {/* Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-0 top-[52%] mx-2 -translate-y-1/2 p-2 bg-purple-500 text-white rounded-full hover:bg-purple-600"
-      >
-        <ChevronLeft size={20} />
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute right-0 top-1/2 mx-2 -translate-y-1/2 p-2 bg-purple-500 text-white rounded-full hover:bg-purple-600"
-      >
-        <ChevronRight size={20} />
-      </button>
     </div>
+
+    {/* Description/Quote */}
+    <p className="text-gray-300 text-sm text-center mb-4 italic">
+      "{data.description}"
+    </p>
+
+    {/* Name */}
+    <h3 className="text-lg font-bold text-center">{data.name}</h3>
+
+    {/* Role */}
+    <p className="text-gray-400 text-sm text-center mt-1">
+      {data.role}
+    </p>
+  </div>
   );
 };
 

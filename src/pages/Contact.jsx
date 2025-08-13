@@ -258,7 +258,7 @@ const ContactUsPage = () => {
                 <p className="text-gray-300 text-sm">Connect with us</p>
               </div>
 
-              {/* Location Card */}
+
               <div
                 onClick={handleLocationClick}
                 className="backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:scale-105 transition-all duration-300 cursor-pointer group"

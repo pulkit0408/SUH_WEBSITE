@@ -1,4 +1,3 @@
-import React from "react";
 import OwnerCard from "../components/OwnerCard";
 
 const Founder = () => {
@@ -8,34 +7,47 @@ const Founder = () => {
       role: "Co-Founder",
       image: "mayank.jpg",
       description:
-        "“As co-founder of SUH TECH PRIVATE LIMITED, I am passionate about delivering innovative, high-quality solutions. Our team is dedicated to providing digital excellence across all services. We prioritize our clients’ needs and ensure timely, tailored solutions that drive growth and success in today’s ever-evolving digital world.”",
+        "As co-founder of SUH TECH PRIVATE LIMITED, I am passionate about delivering innovative, high-quality solutions. Our team is dedicated to providing digital excellence across all services. We prioritize our clients' needs and ensure timely, tailored solutions that drive growth and success in today's ever-evolving digital world.",
     },
     {
       name: "M jha",
       role: "Founder",
       image: "m2.jpg",
       description:
-        "“As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we’ve built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.From the start, we have focused on building lasting relationships with our clients, working side-by-side with them to turn their ideas into impactful digital experiences. I firmly believe in the power of collaboration and always strive to ensure that we value your time in every project we undertake.We are committed to staying ahead of industry trends and delivering solutions that not only meet but exceed our clients’ expectations. I look forward to continuing this exciting journey and making a positive impact on every business we partner with.”",
+        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
     },
   ];
 
   return (
     <div className="py-10">
-      <h2
-        className="text-center text-3xl font-bold mb-6"
-        style={{
-          background:
-            "linear-gradient(90deg, #526EDE 0%, #8E51C5 50%, #CB34AD 100%)",
-          backgroundClip: "text",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-      >
-        Meet Our Leaders
-      </h2>
-      <OwnerCard data={foundersData} />
+      <style jsx>{`
+        @keyframes gradientShift {
+          0%, 100% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+        }
+      `}</style>
+
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-center">
+        Meet Our{' '}
+        <span
+          className="bg-gradient-to-r from-pink-500 via-blue-500 to-pink-500 bg-clip-text text-transparent inline-block animate-pulse"
+          style={{
+            backgroundSize: "200% 200%",
+            animation: "gradientShift 4s ease-in-out infinite"
+          }}
+        >
+          Leaders
+        </span>
+      </h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+        {foundersData.map((founder, index) => (
+          <OwnerCard key={index} data={founder} />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Founder;
+

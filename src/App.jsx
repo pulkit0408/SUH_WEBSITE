@@ -3,6 +3,7 @@ import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Brands from "./pages/Brands";
 import ContactUsPage from "./pages/Contact";
+import Footer from "./pages/Footer";
 import Founder from "./pages/Founder";
 import HeroSection from "./pages/Hero";
 import Navbar from "./pages/Navbar";
@@ -22,6 +23,7 @@ function App() {
         <Testimonials />
         <Founder />
         <ContactUsPage />
+        <Footer/>
       </main>
       <WhatsAppFloat />
     </div>
