@@ -63,7 +63,7 @@ const BlogPost = ({ slug }) => {
     },
     "about-teamwork": {
       title: "/About Teamwork",
-      image: "Blog2.png",
+      image: "/Blog2.png",
       tags: ["UI/UX Design"],
       date: "August 10, 2024",
       readTime: "6 min read",

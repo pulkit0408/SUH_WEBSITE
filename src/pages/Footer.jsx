@@ -17,10 +17,15 @@ const Footer = () => {
             </span>
           </h2>
           <button
-            className="px-8 py-4 text-white rounded-2xl font-semibold transition-all duration-300  relative overflow-hidden group"
+            className="px-8 py-4 text-white rounded-2xl font-semibold transition-all duration-300  relative overflow-hidden group cursor-pointer"
             style={{
               background:
                 "linear-gradient(135deg, #4B72E1 0%, #8E51C5 50%, #D230A9 100%)",
+            }}
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+              });
             }}
           >
             <span className="relative z-10">Get Demo</span>
