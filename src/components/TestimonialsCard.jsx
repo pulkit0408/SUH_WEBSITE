@@ -1,6 +1,6 @@
 const Card = ({ name, role, image, rating, testimonial }) => {
   return (
-    <div className="flex flex-col items-center max-w-[360px] sm:max-w-[400px] w-full min-h-[450px] sm:min-h-[550px] py-6 sm:py-10 px-6 sm:px-8 rounded-lg bg-white/[0.03] border border-white/20 backdrop-blur-md text-center shadow-lg">
+    <div className="flex flex-col items-center max-w-[360px] sm:max-w-[400px] w-full  py-6 sm:py-10 px-6 sm:px-8 rounded-lg bg-white/[0.03] border border-white/20 backdrop-blur-md text-center shadow-lg">
       {/* Testimonial Text */}
       <p className="text-white text-sm sm:text-base text-center leading-relaxed sm:leading-[34px] font-normal">
         {testimonial}

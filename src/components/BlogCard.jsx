@@ -6,7 +6,7 @@ const BlogCard = ({ image, tags = [], title, description, link }) => {
         <img
           src={image}
           alt={title}
-          className="w-full h-48 sm:h-60 object-cover"
+          className="w-full h-48  object-cover"
         />
       </div>
 
