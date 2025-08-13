@@ -35,11 +35,11 @@ const ContactUsPage = () => {
   };
 
   const handleEmailClick = () => {
-    window.location.href = "mailto:hello@agency.com";
+    window.location.href = "mailto:info@suhtech.top";
   };
 
   const handleCallClick = () => {
-    window.location.href = "tel:+15551234567";
+    window.location.href = "tel:+91 9211056355";
   };
 
   const handleLinkedInClick = () => {
