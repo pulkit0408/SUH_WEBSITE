@@ -1,8 +1,14 @@
 import { ArrowRight, Award, Eye, Heart, Lightbulb, Target, Users } from "lucide-react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const AboutPage = () => {
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
   const services = [
     {
@@ -53,7 +59,6 @@ const AboutPage = () => {
   ];
 
   const handleGetStarted = () => {
-    // Navigate to home page and then scroll to contact
     navigate('/', { replace: true });
     setTimeout(() => {
       const contactElement = document.getElementById('contact');
@@ -76,9 +81,9 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="text-white mt-10">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
+    <div className="text-white">
+      {/* Hero Section - Removed mt-10 and added pt-10 instead */}
+      <div className="relative overflow-hidden pt-10">
         <div className="absolute inset-0"></div>
         <div className="container mx-auto px-4 py-20 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
