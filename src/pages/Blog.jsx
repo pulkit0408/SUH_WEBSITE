@@ -1,6 +1,30 @@
 import BlogCard from "../components/BlogCard";
 
 const Blog = () => {
+  const blogPosts = [
+    {
+      image: "Blog1.png",
+      tags: ["UI/UX Design", "Product Design"],
+      title: "The Power of insights",
+      description: "Discover how data driven design decisions can elevate your products...",
+      slug: "power-of-insights"
+    },
+    {
+      image: "Blog2.png",
+      tags: ["UI/UX Design"],
+      title: "About Teamwork",
+      description: "Discover how data driven design decisions can elevate your products...",
+      slug: "about-teamwork"
+    },
+    {
+      image: "Blog3.png",
+      tags: ["UI/UX Design", "Product Design"],
+      title: "Mobile App Designing",
+      description: "Discover how data driven design decisions can elevate your products...",
+      slug: "mobile-app-designing"
+    }
+  ];
+
   return (
     <div className="py-10 my-10 flex flex-col items-center gap-4">
       <div className="flex flex-col max-w-[591px] py-4 px-4 animate-fade-in-up">
@@ -27,33 +51,24 @@ const Blog = () => {
 
       {/* Blog Cards - 3 in a row */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mx-4 sm:mx-10 mt-10 max-w-7xl animate-fade-in-up-delayed">
-        <div className="animate-slide-in-left md:animate-float-1">
-          <BlogCard
-            image="Blog1.png"
-            tags={["UI/UX Design", "Product Design"]}
-            title="The Power of insights"
-            description="Discover how data driven design decisions can elevate your products..."
-            link="#"
-          />
-        </div>
-        <div className="animate-slide-in-up md:animate-float-2">
-          <BlogCard
-            image="Blog2.png"
-            tags={["UI/UX Design"]}
-            title="About Teamwork"
-            description="Discover how data driven design decisions can elevate your products..."
-            link="#"
-          />
-        </div>
-        <div className="animate-slide-in-right md:animate-float-3">
-          <BlogCard
-            image="Blog3.png"
-            tags={["UI/UX Design", "Product Design"]}
-            title="Mobile App Designing"
-            description="Discover how data driven design decisions can elevate your products..."
-            link="#"
-          />
-        </div>
+        {blogPosts.map((post, index) => (
+          <div
+            key={index}
+            className={`${
+              index === 0 ? 'animate-slide-in-left md:animate-float-1' :
+              index === 1 ? 'animate-slide-in-up md:animate-float-2' :
+              'animate-slide-in-right md:animate-float-3'
+            }`}
+          >
+            <BlogCard
+              image={post.image}
+              tags={post.tags}
+              title={post.title}
+              description={post.description}
+              slug={post.slug}
+            />
+          </div>
+        ))}
       </div>
 
       <style jsx>{`

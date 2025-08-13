@@ -1,6 +1,13 @@
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMore = () => {
+    navigate('/about');
+  };
+
   return (
     <>
       <div
@@ -52,6 +59,7 @@ const About = () => {
           {/* Fixed button container with proper alignment */}
           <div className="mt-6 flex justify-center lg:justify-start w-full">
             <button
+              onClick={handleLearnMore}
               className="flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-white rounded-2xl font-semibold w-full sm:w-56 h-12 sm:h-14 transition-all duration-300 shadow-xl relative overflow-hidden group hover:scale-105 hover:-translate-y-1 active:scale-95"
               style={{
                 background:

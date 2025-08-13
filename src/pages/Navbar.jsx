@@ -1,10 +1,16 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { useLocation, useNavigate } from "react-router-dom";
+
+
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
+  const navigate = useNavigate();
+const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,9 +32,19 @@ const Navbar = () => {
     setActiveItem(itemName);
     setIsMenuOpen(false);
 
-    const section = document.querySelector(href);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+    // Smooth scroll for home page sections
+    const scrollToSection = () => {
+      const section = document.querySelector(href);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(scrollToSection, 300);
+    } else {
+      scrollToSection();
     }
   };
 
