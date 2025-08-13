@@ -25,28 +25,28 @@ const Founder = () => {
       role: "CTO",
       image: "ankit_pic.jpg",
       description:
-        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+        "As the Chief Technology Officer at SUH TECH PRIVATE LIMITED, I am dedicated to driving innovation and building cutting-edge technological solutions that empower our clients. My focus is on aligning technology strategy with business goals, ensuring robust system architecture, scalability, and security. With a passion for emerging tech trends, I lead our development teams to deliver solutions that are not only functional but also future-ready.",
     },
     {
       name: "Pulkit Pandey",
       role: "Head of IT",
       image: "pulkit_pic.jpg",
       description:
-        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+        "As the Head of IT at SUH TECH PRIVATE LIMITED, I oversee the infrastructure, systems, and networks that power our operations. My role is to ensure seamless technology integration, optimized performance, and uncompromising security. I am committed to leveraging the latest advancements to keep our IT ecosystem agile, reliable, and scalable, enabling our teams to focus on delivering exceptional solutions to clients.",
     },
     {
       name: "Sahil Chaurasia",
       role: "Game Developer",
       image: "sahil.jpg",
       description:
-        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+        "As a Game Developer at SUH TECH PRIVATE LIMITED, I combine creativity with technical expertise to craft engaging, immersive, and visually stunning gaming experiences. I work across multiple platforms and technologies to bring ideas to life, from concept design to final deployment. My goal is to create games that not only entertain but also inspire and connect with players worldwide.",
     },
     {
       name: "Beauty Mondal",
       role: "HR",
       image: "Beauty.jpg",
       description:
-        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+        "As the HR Manager at SUH TECH PRIVATE LIMITED, I am passionate about building a positive workplace culture that nurtures talent and fosters growth. I manage recruitment, employee engagement, and organizational development to ensure our team feels valued and motivated. My mission is to create an environment where every individual can thrive, contribute their best, and align with our vision for innovation and excellence.",
     },
   ];
 
@@ -57,7 +57,9 @@ const Founder = () => {
     // Calculate total width based on card width and gap
     const cardWidth = 384; // max-w-sm = 384px
     const gap = 32; // gap-8 = 32px
-    setTotalWidth((foundersData.length * cardWidth) + (foundersData.length - 1) * gap);
+    setTotalWidth(
+      foundersData.length * cardWidth + (foundersData.length - 1) * gap
+    );
   }, [foundersData.length]);
 
   return (
@@ -123,7 +125,9 @@ const Founder = () => {
         onTouchEnd={() => setIsPaused(false)}
       >
         <div
-          className={`flex gap-8 px-4 ${isPaused ? 'animate-scroll-paused' : 'animate-scroll'}`}
+          className={`flex gap-8 px-4 ${
+            isPaused ? "animate-scroll-paused" : "animate-scroll"
+          }`}
           style={{ width: `${totalWidth * 2}px` }}
         >
           {duplicatedData.map((founder, index) => (
