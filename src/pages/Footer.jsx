@@ -72,7 +72,7 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="/web-development"
+                    href="#contact"
                     className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
                   >
                     Web Development
@@ -80,7 +80,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/mobile-apps"
+                    href="#contact"
                     className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
                   >
                     Mobile Applications
@@ -88,7 +88,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/ai-solutions"
+                    href="#contact"
                     className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
                   >
                     AI Solutions
@@ -96,7 +96,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/cloud-services"
+                    href="#contact"
                     className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
                   >
                     Cloud Services
@@ -111,28 +111,14 @@ const Footer = () => {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="/contact"
+                    id="/contact"
+                    href="#contact"
                     className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
                   >
                     Contact Us
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="/terms"
-                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
-                  >
-                    Terms & Conditions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/privacy"
-                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
+
                 <li>
                   <a
                     href="/about"
@@ -201,7 +187,7 @@ const Footer = () => {
                 <p className="font-medium">Address:</p>
                 <p>Habitech crystal mall,</p>
                 <p>knowledge park III,</p>
-                <p>4th floor,D-8,Greater Noida</p>
+                <p>4th floor,D-8,Greater Noida,</p>
                 <p>India</p>
               </div>
             </div>

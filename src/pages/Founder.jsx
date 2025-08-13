@@ -3,16 +3,45 @@ import OwnerCard from "../components/OwnerCard";
 const Founder = () => {
   const foundersData = [
     {
+      name: "M jha",
+      role: "Founder",
+      image: "m2.jpg",
+      description:
+        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+    },
+    {
       name: "M. Mayank",
       role: "Co-Founder",
       image: "mayank.jpg",
       description:
         "As co-founder of SUH TECH PRIVATE LIMITED, I am passionate about delivering innovative, high-quality solutions. Our team is dedicated to providing digital excellence across all services. We prioritize our clients' needs and ensure timely, tailored solutions that drive growth and success in today's ever-evolving digital world.",
     },
+
     {
-      name: "M jha",
-      role: "Founder",
-      image: "m2.jpg",
+      name: "Ankit Kumar",
+      role: "CTO",
+      image: "ankit_pic.jpg",
+      description:
+        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+    },
+    {
+      name: "Pulkit Pandey",
+      role: "Head of IT",
+      image: "pulkit_pic.jpg",
+      description:
+        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+    },
+    {
+      name: "Sahil Chaurasia",
+      role: "Game Developer",
+      image: "sahil.jpg",
+      description:
+        "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
+    },
+    {
+      name: "Beauty Mondal",
+      role: "HR",
+      image: "Beauty.jpg",
       description:
         "As the founder of SUH TECH PRIVATE LIMITED, I am incredibly proud of the talented team we've built and the innovative solutions we create. Our mission has always been to empower businesses by providing exceptional technology services with a focus on quality, creativity, and timely delivery.",
     },
@@ -41,11 +70,11 @@ const Founder = () => {
             animation: "gradientShift 4s ease-in-out infinite",
           }}
         >
-          Leaders
+          Team
         </span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto px-4">
         {foundersData.map((founder, index) => (
           <OwnerCard key={index} data={founder} />
         ))}
