@@ -51,7 +51,7 @@ const ContactUsPage = () => {
   };
 
   return (
-    <section id="contact" className="relative   px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-10   px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div

@@ -1,6 +1,10 @@
+import { useEffect, useState } from "react";
 import OwnerCard from "../components/OwnerCard";
 
 const Founder = () => {
+  const [totalWidth, setTotalWidth] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
   const foundersData = [
     {
       name: "M jha",
@@ -16,7 +20,6 @@ const Founder = () => {
       description:
         "As co-founder of SUH TECH PRIVATE LIMITED, I am passionate about delivering innovative, high-quality solutions. Our team is dedicated to providing digital excellence across all services. We prioritize our clients' needs and ensure timely, tailored solutions that drive growth and success in today's ever-evolving digital world.",
     },
-
     {
       name: "Ankit Kumar",
       role: "CTO",
@@ -47,8 +50,18 @@ const Founder = () => {
     },
   ];
 
+  // Duplicate the data for seamless scrolling
+  const duplicatedData = [...foundersData, ...foundersData];
+
+  useEffect(() => {
+    // Calculate total width based on card width and gap
+    const cardWidth = 384; // max-w-sm = 384px
+    const gap = 32; // gap-8 = 32px
+    setTotalWidth((foundersData.length * cardWidth) + (foundersData.length - 1) * gap);
+  }, [foundersData.length]);
+
   return (
-    <div className="py-10">
+    <div className="py-8 px-15">
       <style jsx>{`
         @keyframes gradientShift {
           0%,
@@ -57,6 +70,33 @@ const Founder = () => {
           }
           50% {
             background-position: 100% 50%;
+          }
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-${totalWidth}px);
+          }
+        }
+
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+        }
+
+        .animate-scroll-paused {
+          animation: scroll 40s linear infinite;
+          animation-play-state: paused;
+        }
+
+        @media (max-width: 640px) {
+          .animate-scroll {
+            animation-duration: 35s; /* Slower on mobile for better readability */
+          }
+          .animate-scroll-paused {
+            animation-duration: 35s;
           }
         }
       `}</style>
@@ -74,10 +114,22 @@ const Founder = () => {
         </span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-auto px-4">
-        {foundersData.map((founder, index) => (
-          <OwnerCard key={index} data={founder} />
-        ))}
+      {/* Unified Scrolling Animation for Both Mobile and Desktop */}
+      <div
+        className="overflow-hidden"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+        onTouchStart={() => setIsPaused(true)}
+        onTouchEnd={() => setIsPaused(false)}
+      >
+        <div
+          className={`flex gap-8 px-4 ${isPaused ? 'animate-scroll-paused' : 'animate-scroll'}`}
+          style={{ width: `${totalWidth * 2}px` }}
+        >
+          {duplicatedData.map((founder, index) => (
+            <OwnerCard key={index} data={founder} />
+          ))}
+        </div>
       </div>
     </div>
   );
