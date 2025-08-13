@@ -1,119 +1,169 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-inherit text-white py-12 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              {/* Replace with your actual logo */}
-              <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-blue-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>
-              <h3 className="text-xl font-bold">SUH Tech</h3>
-            </div>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Delivering innovative, high-quality digital solutions with excellence,
-              creativity, and timely delivery since 2024.
-            </p>
-            <div className="text-gray-400 text-xs">
-              <p>SUH TECH PRIVATE LIMITED</p>
-              <p>Incorporated: February 13, 2024</p>
-            </div>
-          </div>
+    <footer className="text-white border-t-2 border-white/10">
+      {/* Tagline Section */}
+      <div className="py-16 px-4">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <h2 className="text-4xl md:text-5xl font-bold">
+            <span className="text-white">One </span>
+            <span className="bg-gradient-to-r from-pink-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">Platform</span>
+            <span className="text-white"> Global </span>
+            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Impact</span>
+          </h2>
+          <button
+            className="px-8 py-4 text-white rounded-2xl font-semibold transition-all duration-300  relative overflow-hidden group"
+            style={{
+              background: 'linear-gradient(135deg, #4B72E1 0%, #8E51C5 50%, #D230A9 100%)'
+            }}
+          >
+            <span className="relative z-10">Get Demo</span>
+          </button>
+        </div>
+      </div>
 
+      {/* Main Footer Content */}
+      <div className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="/services" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="/portfolio" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a href="/blog" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="/about" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-
-
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Our Vision</h4>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              To be the leading technology partner, empowering businesses through
-              innovative digital solutions and exceptional service delivery.
-            </p>
-            <h5 className="text-md font-medium text-pink-400 mt-3">Mission</h5>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              Providing cutting-edge technology services with focus on quality,
-              creativity, and building lasting client relationships.
-            </p>
-          </div>
-
-
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold">Get In Touch</h4>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-3">
-                <MapPin size={16} className="text-pink-400 mt-1 flex-shrink-0" />
-                <div className="text-gray-300 text-sm">
-                  <p>D-052/GF, SECTOR-32</p>
-                  <p>PI ELDECO RESIDENCY</p>
-                  <p>Noida, Uttar Pradesh 201301</p>
-                  <p>India</p>
-                </div>
-              </div>
+            {/* Company Info */}
+            <div className="space-y-6">
               <div className="flex items-center space-x-3">
-                <Mail size={16} className="text-pink-400" />
-                <a href="mailto:info@suhtech.com" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                <img
+                  src="logo_Suh.jpg"
+                  className="rounded-full"
+                  height={48}
+                  width={48}
+                  alt="SUH TECH Logo"
+                />
+                <h3 className="text-2xl font-bold text-white">SUH TECH</h3>
+              </div>
+
+              <div className="flex items-center space-x-2 text-gray-300">
+                <Mail size={16} />
+                <a href="mailto:info@suhtech.com" className="hover:text-pink-400 transition-colors">
                   info@suhtech.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
-                <Phone size={16} className="text-pink-400" />
-                <a href="tel:+91" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
-                  +91 XXX XXX XXXX
+
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Delivering innovative, high-quality digital solutions with excellence, creativity, and timely delivery since 2024.
+              </p>
+            </div>
+
+            {/* Services */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Services</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="/web-development" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    Web Development
+                  </a>
+                </li>
+                <li>
+                  <a href="/mobile-apps" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    Mobile Applications
+                  </a>
+                </li>
+                <li>
+                  <a href="/ai-solutions" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    AI Solutions
+                  </a>
+                </li>
+                <li>
+                  <a href="/cloud-services" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    Cloud Services
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* About Us */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">About Us</h4>
+              <ul className="space-y-3">
+                <li>
+                  <a href="/contact" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    Terms & Conditions
+                  </a>
+                </li>
+                <li>
+                  <a href="/privacy" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="/about" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                    Our Story
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Social Profiles */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Social Profiles</h4>
+              <div className="flex space-x-4">
+                <a
+                  href="https://facebook.com/suhtech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all hover:text-white group"
+                >
+                  <Facebook size={18} className="text-gray-300 group-hover:text-white" />
                 </a>
+                <a
+                  href="https://instagram.com/suhtech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all hover:text-white group"
+                >
+                  <Instagram size={18} className="text-gray-300 group-hover:text-white" />
+                </a>
+                <a
+                  href="https://linkedin.com/company/suhtech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all hover:text-white group"
+                >
+                  <Linkedin size={18} className="text-gray-300 group-hover:text-white" />
+                </a>
+                <a
+                  href="https://twitter.com/suhtech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-white/10 hover:bg-black rounded-lg flex items-center justify-center transition-all hover:text-white group"
+                >
+                  <Twitter size={18} className="text-gray-300 group-hover:text-white" />
+                </a>
+              </div>
+
+              {/* Address */}
+              <div className="text-gray-300 text-sm space-y-1 mt-6">
+                <p className="font-medium">Address:</p>
+                <p>D-052/GF, SECTOR-32</p>
+                <p>PI ELDECO RESIDENCY</p>
+                <p>Noida, Uttar Pradesh 201301</p>
+                <p>India</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-8 pt-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © 2025 SUH TECH PRIVATE LIMITED. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-gray-400 hover:text-pink-400 transition-colors text-sm">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="text-gray-400 hover:text-pink-400 transition-colors text-sm">
-                Terms of Service
-              </a>
-            </div>
-          </div>
+      {/* Copyright Section */}
+      <div className="border-t border-white/10 py-6 px-4">
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="text-gray-400 text-sm">
+            © 2025 SUH TECH PRIVATE LIMITED. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
