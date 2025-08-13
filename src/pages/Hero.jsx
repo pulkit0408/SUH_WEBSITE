@@ -66,7 +66,14 @@ const HeroSection = () => {
               </button>
 
               {/* Contact Button */}
-              <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 w-full sm:w-56 h-12 sm:h-14 rounded-2xl text-white font-semibold backdrop-blur-sm transition-all duration-300 relative overflow-hidden group hover:scale-105 hover:-translate-y-1 active:scale-95 hover:border-white/50 hover:bg-white/10">
+              <button className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-white/30 w-full sm:w-56 h-12 sm:h-14 rounded-2xl text-white font-semibold backdrop-blur-sm transition-all duration-300 relative overflow-hidden group hover:scale-105 hover:-translate-y-1 active:scale-95 hover:border-white/50 hover:bg-white/10"
+                onClick={() => {
+                  document.getElementById("contact")?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+
+              >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
                   style={{
