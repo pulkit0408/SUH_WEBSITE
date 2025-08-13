@@ -8,14 +8,19 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <h2 className="text-4xl md:text-5xl font-bold">
             <span className="text-white">One </span>
-            <span className="bg-gradient-to-r from-pink-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">Platform</span>
+            <span className="bg-gradient-to-r from-pink-500 via-blue-500 to-pink-500 bg-clip-text text-transparent">
+              Platform
+            </span>
             <span className="text-white"> Global </span>
-            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Impact</span>
+            <span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Impact
+            </span>
           </h2>
           <button
             className="px-8 py-4 text-white rounded-2xl font-semibold transition-all duration-300  relative overflow-hidden group"
             style={{
-              background: 'linear-gradient(135deg, #4B72E1 0%, #8E51C5 50%, #D230A9 100%)'
+              background:
+                "linear-gradient(135deg, #4B72E1 0%, #8E51C5 50%, #D230A9 100%)",
             }}
           >
             <span className="relative z-10">Get Demo</span>
@@ -27,7 +32,6 @@ const Footer = () => {
       <div className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-
             {/* Company Info */}
             <div className="space-y-6">
               <div className="flex items-center space-x-3">
@@ -43,13 +47,17 @@ const Footer = () => {
 
               <div className="flex items-center space-x-2 text-gray-300">
                 <Mail size={16} />
-                <a href="mailto:info@suhtech.com" className="hover:text-pink-400 transition-colors">
-                  info@suhtech.com
+                <a
+                  href="mailto:info@suhtech.top"
+                  className="hover:text-pink-400 transition-colors"
+                >
+                  info@suhtech.top
                 </a>
               </div>
 
               <p className="text-gray-300 text-sm leading-relaxed">
-                Delivering innovative, high-quality digital solutions with excellence, creativity, and timely delivery since 2024.
+                Delivering innovative, high-quality digital solutions with
+                excellence, creativity, and timely delivery since 2024.
               </p>
             </div>
 
@@ -58,22 +66,34 @@ const Footer = () => {
               <h4 className="text-lg font-semibold text-white">Services</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/web-development" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/web-development"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     Web Development
                   </a>
                 </li>
                 <li>
-                  <a href="/mobile-apps" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/mobile-apps"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     Mobile Applications
                   </a>
                 </li>
                 <li>
-                  <a href="/ai-solutions" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/ai-solutions"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     AI Solutions
                   </a>
                 </li>
                 <li>
-                  <a href="/cloud-services" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/cloud-services"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     Cloud Services
                   </a>
                 </li>
@@ -85,22 +105,34 @@ const Footer = () => {
               <h4 className="text-lg font-semibold text-white">About Us</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="/contact" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/contact"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a href="/terms" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/terms"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a href="/privacy" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/privacy"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="/about" className="text-gray-300 hover:text-pink-400 transition-colors text-sm">
+                  <a
+                    href="/about"
+                    className="text-gray-300 hover:text-pink-400 transition-colors text-sm"
+                  >
                     Our Story
                   </a>
                 </li>
@@ -109,7 +141,9 @@ const Footer = () => {
 
             {/* Social Profiles */}
             <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white">Social Profiles</h4>
+              <h4 className="text-lg font-semibold text-white">
+                Social Profiles
+              </h4>
               <div className="flex space-x-4">
                 <a
                   href="https://facebook.com/suhtech"
@@ -117,7 +151,10 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-blue-500 rounded-lg flex items-center justify-center transition-all hover:text-white group"
                 >
-                  <Facebook size={18} className="text-gray-300 group-hover:text-white" />
+                  <Facebook
+                    size={18}
+                    className="text-gray-300 group-hover:text-white"
+                  />
                 </a>
                 <a
                   href="https://instagram.com/suhtech"
@@ -125,15 +162,21 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all hover:text-white group"
                 >
-                  <Instagram size={18} className="text-gray-300 group-hover:text-white" />
+                  <Instagram
+                    size={18}
+                    className="text-gray-300 group-hover:text-white"
+                  />
                 </a>
                 <a
-                  href="https://linkedin.com/company/suhtech"
+                  href="https://www.linkedin.com/company/suh-tech/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-all hover:text-white group"
                 >
-                  <Linkedin size={18} className="text-gray-300 group-hover:text-white" />
+                  <Linkedin
+                    size={18}
+                    className="text-gray-300 group-hover:text-white"
+                  />
                 </a>
                 <a
                   href="https://twitter.com/suhtech"
@@ -141,16 +184,19 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-black rounded-lg flex items-center justify-center transition-all hover:text-white group"
                 >
-                  <Twitter size={18} className="text-gray-300 group-hover:text-white" />
+                  <Twitter
+                    size={18}
+                    className="text-gray-300 group-hover:text-white"
+                  />
                 </a>
               </div>
 
               {/* Address */}
               <div className="text-gray-300 text-sm space-y-1 mt-6">
                 <p className="font-medium">Address:</p>
-                <p>D-052/GF, SECTOR-32</p>
-                <p>PI ELDECO RESIDENCY</p>
-                <p>Noida, Uttar Pradesh 201301</p>
+                <p>Habitech crystal mall,</p>
+                <p>knowledge park III,</p>
+                <p>4th floor,D-8,Greater Noida</p>
                 <p>India</p>
               </div>
             </div>

@@ -84,17 +84,17 @@ const HeroSection = () => {
               <div className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105">
                 <div className="w-72 h-56 xs:w-80 xs:h-64 sm:w-72 sm:h-64 lg:w-72 lg:h-64 bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-2xl overflow-hidden backdrop-blur-sm border border-white/10">
                   <img
-                    src="Overlay.png"
-                    alt="Our Team"
+                    src="ludo_game.jpg"
+                    alt="Game Development"
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 text-white">
                     <h3 className="text-base sm:text-lg font-semibold">
-                      Our Team
+                      Working on Game
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-300">
-                      Creative minds working together
+                      Leveling up, one game at a time
                     </p>
                   </div>
                 </div>

@@ -22,18 +22,23 @@ const Founder = () => {
     <div className="py-10">
       <style jsx>{`
         @keyframes gradientShift {
-          0%, 100% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
+          0%,
+          100% {
+            background-position: 0% 50%;
+          }
+          50% {
+            background-position: 100% 50%;
+          }
         }
       `}</style>
 
       <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-center">
-        Meet Our{' '}
+        Meet Our{" "}
         <span
           className="bg-gradient-to-r from-pink-500 via-blue-500 to-pink-500 bg-clip-text text-transparent inline-block animate-pulse"
           style={{
             backgroundSize: "200% 200%",
-            animation: "gradientShift 4s ease-in-out infinite"
+            animation: "gradientShift 4s ease-in-out infinite",
           }}
         >
           Leaders
@@ -50,4 +55,3 @@ const Founder = () => {
 };
 
 export default Founder;
-
