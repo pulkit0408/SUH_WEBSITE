@@ -26,7 +26,7 @@ const Blog = () => {
   ];
 
   return (
-    <div className="py-10 my-10 flex flex-col items-center gap-4">
+    <div className="my-10 flex flex-col items-center gap-4">
       <div className="flex flex-col max-w-[591px] py-4 px-4 animate-fade-in-up">
         <p
           className="text-center font-medium text-xl sm:text-2xl"
