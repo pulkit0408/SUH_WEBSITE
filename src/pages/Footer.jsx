@@ -148,7 +148,7 @@ const Footer = () => {
                   />
                 </a>
                 <a
-                  href="https://instagram.com/suhtech"
+                  href="https://www.instagram.com/suhtechpvtltd/profilecard/?igsh=OXpvMHJqZ3k0em51"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-pink-500 rounded-lg flex items-center justify-center transition-all hover:text-white group"
@@ -170,7 +170,7 @@ const Footer = () => {
                   />
                 </a>
                 <a
-                  href="https://twitter.com/suhtech"
+                  href="https://x.com/suhtechpvt?t=ts0tMtGlnbzZT4MEBSohsQ&s=08"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 hover:bg-black rounded-lg flex items-center justify-center transition-all hover:text-white group"
