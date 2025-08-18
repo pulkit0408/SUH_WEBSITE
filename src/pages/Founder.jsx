@@ -43,10 +43,31 @@ const Founder = () => {
     },
     {
       name: "Beauty Mondal",
-      role: "HR",
+      role: "Admin",
       image: "Beauty.jpg",
       description:
         "As the HR Manager at SUH TECH PRIVATE LIMITED, I am passionate about building a positive workplace culture that nurtures talent and fosters growth. I manage recruitment, employee engagement, and organizational development to ensure our team feels valued and motivated. My mission is to create an environment where every individual can thrive, contribute their best, and align with our vision for innovation and excellence.",
+    },
+    {
+      name: "Soumya Sindhu",
+      role: "BDE",
+      image: "Soumya.jpg",
+      description:
+        "As the Business Development Manager at SUH TECH PRIVATE LIMITED, I am focused on driving growth by developing strategies, building lasting client relationships, and exploring new market opportunities. My role is to lead business initiatives, identify potential partnerships, and ensure our solutions align with client needs. I am passionate about fostering sustainable growth, strengthening our market presence, and contributing to the company’s vision of innovation and excellence.",
+    },
+    {
+      name: "Vaideeka Sharma",
+      role: "Sales",
+      image: "Soumya.jpg",
+      description:
+        "As the Sales Manager at SUH TECH PRIVATE LIMITED, I am responsible for leading our sales strategies, driving revenue growth, and building strong client relationships. My role is to identify market opportunities, guide the sales team, and ensure we deliver solutions that meet client needs. I am passionate about achieving targets, fostering a high-performance culture, and contributing to the company’s long-term success and vision of excellence.",
+    },
+    {
+      name: "Aman Kumar",
+      role: "Marketing Executive",
+      image: "Soumya.jpg",
+      description:
+        "As a Marketing Executive at SUH TECH PRIVATE LIMITED, I support the development and execution of marketing campaigns that promote our services and brand. My role involves assisting in content creation, social media management, and market research to reach the right audience. I am eager to learn, contribute fresh ideas, and help strengthen the company’s marketing efforts and growth.",
     },
   ];
 
