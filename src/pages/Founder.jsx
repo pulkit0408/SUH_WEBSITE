@@ -74,7 +74,7 @@ const Founder = () => {
       role: "Marketing Manager",
       image: "Soumya.jpg",
       description:
-        "As a Marketing Executive at SUH TECH PRIVATE LIMITED, I support the development and execution of marketing campaigns that promote our services and brand. My role involves assisting in content creation, social media management, and market research to reach the right audience. I am eager to learn, contribute fresh ideas, and help strengthen the company’s marketing efforts and growth.",
+        "As the Marketing Manager at SUH TECH PRIVATE LIMITED, I lead the planning and execution of strategies that build our brand and expand market reach. My role involves overseeing campaigns, guiding the marketing team, and leveraging data-driven insights to achieve impactful results. I am passionate about driving brand growth, strengthening engagement, and contributing to the company’s long-term success.",
     },
   ];
 
