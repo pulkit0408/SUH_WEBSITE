@@ -46,7 +46,7 @@ const Founder = () => {
       role: "Admin",
       image: "Beauty.jpg",
       description:
-        "As the HR Manager at SUH TECH PRIVATE LIMITED, I am passionate about building a positive workplace culture that nurtures talent and fosters growth. I manage recruitment, employee engagement, and organizational development to ensure our team feels valued and motivated. My mission is to create an environment where every individual can thrive, contribute their best, and align with our vision for innovation and excellence.",
+        "As the Admin at SUH TECH PRIVATE LIMITED, I ensure smooth day-to-day operations by managing office activities, coordinating tasks, and supporting both management and staff. My role is to maintain organization, handle essential administrative duties, and create an efficient work environment. I am dedicated to keeping processes streamlined and contributing to the overall productivity of the company.",
     },
     {
       name: "Soumya Sindhu",
