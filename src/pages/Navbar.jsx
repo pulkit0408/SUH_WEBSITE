@@ -1,16 +1,13 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-
 import { useLocation, useNavigate } from "react-router-dom";
-
-
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
   const navigate = useNavigate();
-const location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,31 +17,45 @@ const location = useLocation();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Update active item based on current location
+  useEffect(() => {
+    if (location.pathname === "/careers") {
+      setActiveItem("Career");
+    } else if (location.pathname === "/") {
+      setActiveItem("Home");
+    }
+  }, [location.pathname]);
+
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "#home", type: "scroll" },
+    { name: "Services", href: "#services", type: "scroll" },
+    { name: "About", href: "#about", type: "scroll" },
+    { name: "Contact", href: "#contact", type: "scroll" },
+    { name: "Career", href: "/careers", type: "route" },
   ];
 
-  const handleNavClick = (itemName, href) => {
+  const handleNavClick = (itemName, href, type) => {
     setActiveItem(itemName);
     setIsMenuOpen(false);
 
-    // Smooth scroll for home page sections
-    const scrollToSection = () => {
-      const section = document.querySelector(href);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    if (location.pathname !== "/") {
-      navigate("/");
-      setTimeout(scrollToSection, 300);
+    if (type === "route") {
+      // Navigate to different route
+      navigate(href);
     } else {
-      scrollToSection();
+      // Smooth scroll for home page sections
+      const scrollToSection = () => {
+        const section = document.querySelector(href);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(scrollToSection, 300);
+      } else {
+        scrollToSection();
+      }
     }
   };
 
@@ -75,7 +86,7 @@ const location = useLocation();
               {navItems.map((item) => (
                 <button
                   key={item.name}
-                  onClick={() => handleNavClick(item.name, item.href)}
+                  onClick={() => handleNavClick(item.name, item.href, item.type)}
                   className={`transition-colors duration-300 font-medium relative group ${
                     activeItem === item.name
                       ? "text-pink-400"
@@ -127,7 +138,7 @@ const location = useLocation();
           {navItems.map((item, index) => (
             <button
               key={item.name}
-              onClick={() => handleNavClick(item.name, item.href)}
+              onClick={() => handleNavClick(item.name, item.href, item.type)}
               className={`transition-all duration-500 font-medium text-2xl transform ${
                 isMenuOpen
                   ? "translate-x-0 opacity-100"
