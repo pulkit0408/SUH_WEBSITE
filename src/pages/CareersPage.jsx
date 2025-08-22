@@ -279,7 +279,7 @@ ${formData.fullName}
       </Helmet>
 
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900"></div>
+      <div className="absolute inset-0"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute top-1/2 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl translate-x-1/2"></div>
       <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gradient-to-t from-purple-500/20 to-pink-500/20 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2"></div>
