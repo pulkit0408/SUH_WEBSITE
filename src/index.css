@@ -8,19 +8,16 @@ body {
 }
 
 
-
-
-/* Performance optimizations */
 * {
   box-sizing: border-box;
 }
 
-/* Smooth scrolling */
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Font loading optimization */
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -37,15 +34,10 @@ html {
   src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap');
 }
 
-/* Custom animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
 
-  to {
-    opacity: 1;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -53,7 +45,6 @@ html {
     opacity: 0;
     transform: translateY(30px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -65,38 +56,20 @@ html {
     opacity: 0;
     transform: scale(0.3);
   }
-
   50% {
     opacity: 1;
     transform: scale(1.05);
   }
-
   70% {
     transform: scale(0.9);
   }
-
   100% {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-/* Custom utility classes */
-@utility fade-in {
-  animation: var(--animate-fade-in);
-}
-
-@utility slide-up {
-  animation: var(--animate-slide-up);
-}
-
-@utility bounce-in {
-  animation: var(--animate-bounce-in);
-}
-
-/* Performance: Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -106,28 +79,6 @@ html {
     scroll-behavior: auto !important;
   }
 }
-
-/* Critical above-the-fold styles */
-.hero-section {
-  min-height: 100vh;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-}
-
-/* Image optimization */
-img {
-  max-width: 100%;
-  height: auto;
-  loading: lazy;
-}
-
-/* Focus styles for accessibility */
-*:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Print styles */
 @media print {
   .no-print {
     display: none !important;
